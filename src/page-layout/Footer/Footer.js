@@ -6,6 +6,7 @@ const Footer = () => {
     <MainContainer>
       <Container>
         <Logo>Cats4Homes</Logo>
+        
         <LinksContainer>
           <LinkSection>
             <LinkHeader>Cats And Kittens For sale</LinkHeader>

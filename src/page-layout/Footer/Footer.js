@@ -9,7 +9,7 @@ const Footer = () => {
 
         <LinksContainer>
           <LinkSection>
-            <LinkHeader>Cats And Kittens For sale</LinkHeader>
+            <LinkHeader>Cats And Kittens For Sale</LinkHeader>
             <LinkItem>Sphynx For Sale</LinkItem>
             <LinkItem>Persian For Sale</LinkItem>
             <LinkItem>Bengal For Sale</LinkItem>

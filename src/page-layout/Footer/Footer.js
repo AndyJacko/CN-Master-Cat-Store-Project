@@ -6,13 +6,13 @@ const Footer = () => {
     <MainContainer>
       <Container>
         <Logo>Cats4Homes</Logo>
-        
+
         <LinksContainer>
           <LinkSection>
             <LinkHeader>Cats And Kittens For sale</LinkHeader>
-            <LinkItem>Sphynx For sale</LinkItem>
-            <LinkItem>Persian For sale</LinkItem>
-            <LinkItem>Bengal For sale</LinkItem>
+            <LinkItem>Sphynx For Sale</LinkItem>
+            <LinkItem>Persian For Sale</LinkItem>
+            <LinkItem>Bengal For Sale</LinkItem>
           </LinkSection>
 
           <LinkSection>

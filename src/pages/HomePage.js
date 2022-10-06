@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 import styled from "styled-components";
-import "./Homepage.css";
 
 const HomePage = () => {
   let [data, setData] = useState();
@@ -45,7 +44,7 @@ const HomePage = () => {
 
   return (
     <>
-      {isLoading && <div className="loader"></div>}
+      {isLoading && <LoadingDiv />}
       {data && !isLoading && (
         <div>
           <Rowofcats>
@@ -207,3 +206,25 @@ const Rowofcats = styled.div`
     flex-direction: column;
   }
 `;
+
+const LoadingDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+`

@@ -24,7 +24,7 @@ const PageLayout = ({ children }) => {
         <Footer />
       </footer>
 
-      <div id="overlay" className="overlay hide"></div>
+      <div id="overlay" className="overlay hide" onClick={onCloseBasket}></div>
       <div id="sidebar" className="sidebar">
         <div className="closebtn" onClick={onCloseBasket}>
           X

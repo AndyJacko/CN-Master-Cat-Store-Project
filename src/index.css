@@ -16,6 +16,9 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
+
+/* ============ header ============ */
+
 .cat1{
   height: 55px;
   width: 55px;
@@ -27,3 +30,5 @@ body {
 .banner{
   display: block;
 }
+
+/* ================================= */

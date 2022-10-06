@@ -1,27 +1,26 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ProductDetail from "./ProductDetail";
 import styled from "styled-components";
 
+const catArray = [];
+const url = [
+  "https://api.thecatapi.com/v1/images/BDb8ZXb1v",
+  "https://api.thecatapi.com/v1/images/B1ERTmgph",
+  "https://api.thecatapi.com/v1/images/DbwiefiaY",
+  "https://api.thecatapi.com/v1/images/4RzEwvyzz",
+  "https://api.thecatapi.com/v1/images/OOD3VXAQn",
+  "https://api.thecatapi.com/v1/images/sxIXJax6h",
+  "https://api.thecatapi.com/v1/images/-tm9-znzl",
+  "https://api.thecatapi.com/v1/images/TuSyTkt2n",
+  "https://api.thecatapi.com/v1/images/IFXsxmXLm",
+  "https://api.thecatapi.com/v1/images/j6oFGLpRG",
+  "https://api.thecatapi.com/v1/images/njK25knLH",
+  "https://api.thecatapi.com/v1/images/ai6Jps4sx",
+];
+
 const HomePage = () => {
-  let [data, setData] = useState();
+  const [data, setData] = useState();
   const [isLoading, setisLoading] = useState(true);
-  let catArray = [];
-  let url = [
-    "https://api.thecatapi.com/v1/images/BDb8ZXb1v",
-    "https://api.thecatapi.com/v1/images/B1ERTmgph",
-    "https://api.thecatapi.com/v1/images/DbwiefiaY",
-    "https://api.thecatapi.com/v1/images/4RzEwvyzz",
-    "https://api.thecatapi.com/v1/images/OOD3VXAQn",
-    "https://api.thecatapi.com/v1/images/sxIXJax6h",
-    "https://api.thecatapi.com/v1/images/-tm9-znzl",
-    "https://api.thecatapi.com/v1/images/TuSyTkt2n",
-    "https://api.thecatapi.com/v1/images/IFXsxmXLm",
-    "https://api.thecatapi.com/v1/images/j6oFGLpRG",
-    "https://api.thecatapi.com/v1/images/njK25knLH",
-    "https://api.thecatapi.com/v1/images/ai6Jps4sx",
-  ];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,15 +31,13 @@ const HomePage = () => {
           catArray.push(two);
         } catch (error) {
           console.log("Error");
-        } finally {
-          console.log(data);
         }
       }
       setisLoading(false);
       setData(catArray);
     };
     fetchData();
-  }, []);
+  }, [data]);
 
   return (
     <>

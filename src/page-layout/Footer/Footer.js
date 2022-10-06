@@ -55,12 +55,10 @@ const Footer = () => {
 export default Footer;
 
 const MainContainer = styled.div`
-  width: 100%;
   background: #181133;
 `;
 
 const Container = styled.div`
-  width: 100%;
   padding: 20px;
   color: #8392a5;
   font-size: 18px;

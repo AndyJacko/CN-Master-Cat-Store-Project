@@ -15,6 +15,11 @@ import Mail from "../../assets/img/mail.svg";
 import Sell from "../../assets/img/sell.svg";
 
 const Header = () => {
+  const onOpenBasket = () => {
+    document.getElementById("overlay").classList.remove("hide");
+    document.getElementById("sidebar").classList.add("open");
+  };
+
   return (
     <MainContainer>
       <Container>
@@ -32,7 +37,7 @@ const Header = () => {
             <Logo>Cats4Homes</Logo>
           </NavLeft>
           <NavRight>
-            <Link className="basket" href="#">
+            <BasketToggle className="basket" onClick={onOpenBasket}>
               <img
                 className="icon"
                 src={Basket}
@@ -41,7 +46,7 @@ const Header = () => {
                 border-radius="5px"
                 alt=""
               />
-            </Link>
+            </BasketToggle>
             <Link className="mail" href="mailto:mail@cat4homes.com">
               <img
                 className="icon"
@@ -194,4 +199,8 @@ const RoundIcon = styled.div`
   justify-content: space-around;
   text-decoration: none;
   color: white;
+`;
+
+const BasketToggle = styled.div`
+  cursor: pointer;
 `;

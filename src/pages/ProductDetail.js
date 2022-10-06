@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import CatImage from "../components/CatImage/CatImage";
 
-const ProductDetail = () => {
+const ProductDetail = ({ atb }) => {
   const { id } = useParams();
   const [cat, setCat] = useState();
 
@@ -19,7 +19,7 @@ const ProductDetail = () => {
   }, [id]);
 
   const onAddCat = () => {
-    // oac(cat.id);
+    atb({ id: cat.id, name: cat.breeds[0].name, price: 250, quantity: 1 });
   };
 
   return (
@@ -162,12 +162,12 @@ const OrangeButton = styled.button`
   color: #ffffff;
   border: none;
   border-radius: 10px;
-  background: #EE9900;
+  background: #ee9900;
   box-shadow: 2px 2px 10px #cccccc;
   cursor: pointer;
 
   :hover {
-    background: #905D00;
+    background: #905d00;
   }
 `;
 

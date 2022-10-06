@@ -48,111 +48,146 @@ const HomePage = () => {
       {isLoading && <div className="loader"></div>}
       {data && !isLoading && (
         <div>
-          <div className="grouped">
-            {<h2>Breed: {data[0].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[0].breeds[0].alt_names}</h3>}
-            {<img src={data[0].url} width="200" height="150" alt="Sphynx" />}
-            <Link to={ProductDetail}>View More Details</Link>
+          <Rowofcats>
+            <div className="column">
+              {<h2>Breed: {data[0].breeds[0].name}</h2>}
+              {<img src={data[0].url} width="200" height="150" alt="Sphynx" />}
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[1].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[1].breeds[0].alt_names}</h3>}
-            {
-              <img
-                src={data[1].url}
-                width="200"
-                height="150"
-                alt="California Spangled"
-              />
-            }
-            <Link to={ProductDetail}>View More Details</Link>
+            <div className="column">
+              {<h2>Breed: {data[1].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[1].url}
+                  width="200"
+                  height="150"
+                  alt="California Spangled"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[2].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[2].breeds[0].alt_names}</h3>}
-            {<img src={data[2].url} width="200" height="150" alt="Korat" />}
-            <Link to={ProductDetail}>View More Details</Link>
+            <div className="column">
+              {<h2>Breed: {data[2].breeds[0].name}</h2>}
+              {<img src={data[2].url} width="200" height="150" alt="Korat" />}
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[3].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[3].breeds[0].alt_names}</h3>}
-            {<img src={data[3].url} width="200" height="150" alt="Devon Rex" />}
-            <Link to={ProductDetail}>View More Details</Link>
-          </div>
-          <div className="grouped">
-            {<h2>Breed: {data[4].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[4].breeds[0].alt_names}</h3>}
-            {
-              <img
-                src={data[4].url}
-                width="200"
-                height="150"
-                alt="Maine Coon"
-              />
-            }
-            <Link to={ProductDetail}>View More Details</Link>
+            <div className="column">
+              {<h2>Breed: {data[3].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[3].url}
+                  width="200"
+                  height="150"
+                  alt="Devon Rex"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
+          </Rowofcats>
 
-            {<h2>Breed: {data[5].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[5].breeds[0].alt_names}</h3>}
-            {
-              <img
-                src={data[5].url}
-                width="200"
-                height="150"
-                alt="Turkish Van"
-              />
-            }
-            <Link to={ProductDetail}>View More Details</Link>
+          <Rowofcats>
+            <div className="column">
+              {<h2>Breed: {data[4].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[4].url}
+                  width="200"
+                  height="150"
+                  alt="Maine Coon"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[6].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[6].breeds[0].alt_names}</h3>}
-            {
-              <img
-                src={data[6].url}
-                width="200"
-                height="150"
-                alt="Japanese Bobtail"
-              />
-            }
-            <Link to={ProductDetail}>View More Details</Link>
+            <div className="column">
+              {<h2>Breed: {data[5].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[5].url}
+                  width="200"
+                  height="150"
+                  alt="Turkish Van"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[7].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[7].breeds[0].alt_names}</h3>}
-            {
-              <img
-                src={data[7].url}
-                width="200"
-                height="150"
-                alt="Egyptian Mau"
-              />
-            }
-            <Link to={ProductDetail}>View More Details</Link>
-          </div>
-          <div className="grouped">
-            {<h2>Breed: {data[8].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[8].breeds[0].alt_names}</h3>}
-            {<img src={data[8].url} width="200" height="150" alt="Bengal" />}
-            <Link to={ProductDetail}>View More Details</Link>
+            <div className="column">
+              {<h2>Breed: {data[6].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[6].url}
+                  width="200"
+                  height="150"
+                  alt="Japanese Bobtail"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[9].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[9].breeds[0].alt_names}</h3>}
-            {<img src={data[9].url} width="200" height="150" alt="Chartreux" />}
-            <Link to={ProductDetail}>View More Details</Link>
+            <div className="column">
+              {<h2>Breed: {data[7].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[7].url}
+                  width="200"
+                  height="150"
+                  alt="Egyptian Mau"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
+          </Rowofcats>
 
-            {<h2>Breed: {data[10].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[10].breeds[0].alt_names}</h3>}
-            {
-              <img
-                src={data[10].url}
-                width="200"
-                height="150"
-                alt="Havana Brown"
-              />
-            }
-            <Link to={ProductDetail}>View More Details</Link>
+          <Rowofcats>
+            <div className="column">
+              {<h2>Breed: {data[8].breeds[0].name}</h2>}
+              {<img src={data[8].url} width="200" height="150" alt="Bengal" />}
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
 
-            {<h2>Breed: {data[11].breeds[0].name}</h2>}
-            {<h3>Alternative names: {data[11].breeds[0].alt_names}</h3>}
-            {<img src={data[11].url} width="200" height="150" alt="Siamese" />}
-            <Link to={ProductDetail}>View More Details</Link>
-          </div>
+            <div className="column">
+              {<h2>Breed: {data[9].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[9].url}
+                  width="200"
+                  height="150"
+                  alt="Chartreux"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
+
+            <div className="column">
+              {<h2>Breed: {data[10].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[10].url}
+                  width="200"
+                  height="150"
+                  alt="Havana Brown"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
+
+            <div className="column">
+              {<h2>Breed: {data[11].breeds[0].name}</h2>}
+              {
+                <img
+                  src={data[11].url}
+                  width="200"
+                  height="150"
+                  alt="Siamese"
+                />
+              }
+              <Link to={ProductDetail}>View More Details</Link>
+            </div>
+          </Rowofcats>
         </div>
       )}{" "}
     </>
@@ -160,3 +195,15 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+const Rowofcats = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+
+  .column {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+  }
+`;

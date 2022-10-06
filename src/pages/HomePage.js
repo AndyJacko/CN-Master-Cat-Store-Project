@@ -49,7 +49,11 @@ const HomePage = () => {
         <div>
           <Rowofcats>
             <div className="column">
-              {<u><h2>{data[0].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[0].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -63,7 +67,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[1].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[1].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -77,7 +85,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[2].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[2].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -91,7 +103,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[3].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[3].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -107,7 +123,11 @@ const HomePage = () => {
 
           <Rowofcats>
             <div className="column">
-              {<u><h2>{data[4].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[4].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -121,7 +141,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[5].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[5].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -135,7 +159,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[6].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[6].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -149,7 +177,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[7].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[7].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -165,7 +197,11 @@ const HomePage = () => {
 
           <Rowofcats>
             <div className="column">
-              {<u><h2>{data[8].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[8].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -179,7 +215,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[9].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[9].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -193,7 +233,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[10].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[10].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -207,7 +251,11 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<u><h2>{data[11].breeds[0].name}</h2></u>}
+              {
+                <u>
+                  <h2>{data[11].breeds[0].name}</h2>
+                </u>
+              }
               {
                 <img
                   className="images"
@@ -245,6 +293,7 @@ const Rowofcats = styled.div`
 
   .images {
     border: thin solid black;
+    border-radius: 10px;
     margin: 3%;
   }
 `;

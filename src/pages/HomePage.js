@@ -63,7 +63,7 @@ const HomePage = () => {
                   alt="Sphynx"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[0].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -81,7 +81,7 @@ const HomePage = () => {
                   alt="California Spangled"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[1].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -99,7 +99,7 @@ const HomePage = () => {
                   alt="Korat"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[2].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -117,7 +117,7 @@ const HomePage = () => {
                   alt="Devon Rex"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[3].id}`}>View More Details</Link>
             </div>
           </Rowofcats>
 
@@ -137,7 +137,7 @@ const HomePage = () => {
                   alt="Maine Coon"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[4].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -155,7 +155,7 @@ const HomePage = () => {
                   alt="Turkish Van"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[5].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -173,7 +173,7 @@ const HomePage = () => {
                   alt="Japanese Bobtail"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[6].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -191,7 +191,7 @@ const HomePage = () => {
                   alt="Egyptian Mau"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[7].id}`}>View More Details</Link>
             </div>
           </Rowofcats>
 
@@ -211,7 +211,7 @@ const HomePage = () => {
                   alt="Bengal"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[8].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -229,7 +229,7 @@ const HomePage = () => {
                   alt="Chartreux"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[9].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -247,7 +247,7 @@ const HomePage = () => {
                   alt="Havana Brown"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[10].id}`}>View More Details</Link>
             </div>
 
             <div className="column">
@@ -265,7 +265,7 @@ const HomePage = () => {
                   alt="Siamese"
                 />
               }
-              <Link to={ProductDetail}>View More Details</Link>
+              <Link to={`/product/${data[11].id}`}>View More Details</Link>
             </div>
           </Rowofcats>
         </div>

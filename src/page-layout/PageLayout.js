@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 
 const PageLayout = ({ children }) => {
   return (
-    <div>
+    <>
       <header>
         <Header />
       </header>
@@ -18,7 +18,7 @@ const PageLayout = ({ children }) => {
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 

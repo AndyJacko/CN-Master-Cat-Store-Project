@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 import CatImage from "../components/CatImage/CatImage";
@@ -28,7 +28,7 @@ const ProductDetail = () => {
         <>
           <div>
             <CatSection>
-              <CatName>{cat.breeds[0].alt_names}</CatName>
+              <CatName>{cat.breeds[0].name}</CatName>
 
               <CatPrice>&pound;250</CatPrice>
             </CatSection>
@@ -39,10 +39,9 @@ const ProductDetail = () => {
               </CatImageContainer>
 
               <CatCart>
-                <OrangeButton onClick={onAddCat}>
-                  Show Phone Number
-                </OrangeButton>
-                <OrangeButton onClick={onAddCat}>Message</OrangeButton>
+                <RedButton to="/">Back To Home</RedButton>
+                <OrangeButton>Show Phone Number</OrangeButton>
+                <OrangeButton>Message</OrangeButton>
                 <BlueButton onClick={onAddCat}>Add To Cart</BlueButton>
               </CatCart>
             </CatSection>
@@ -160,10 +159,16 @@ const OrangeButton = styled.button`
   margin: 10px 0;
   font-weight: bold;
   text-transform: uppercase;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
-  background: #f6b032;
+  background: #EE9900;
   box-shadow: 2px 2px 10px #cccccc;
+  cursor: pointer;
+
+  :hover {
+    background: #905D00;
+  }
 `;
 
 const BlueButton = styled.button`
@@ -175,6 +180,31 @@ const BlueButton = styled.button`
   color: #ffffff;
   border: none;
   border-radius: 10px;
-  background: #2f6df4;
+  background: #042d83;
   box-shadow: 2px 2px 10px #cccccc;
+  cursor: pointer;
+
+  :hover {
+    background: #022163;
+  }
+`;
+
+const RedButton = styled(Link)`
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background: #7f0000;
+  box-shadow: 2px 2px 10px #cccccc;
+  cursor: pointer;
+
+  :hover {
+    background: #5f0000;
+  }
 `;

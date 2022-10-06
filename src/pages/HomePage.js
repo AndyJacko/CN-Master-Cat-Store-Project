@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 import styled from "styled-components";
-import "./Homepage.css";
 
 const HomePage = () => {
   let [data, setData] = useState();
@@ -45,20 +44,29 @@ const HomePage = () => {
 
   return (
     <>
-      {isLoading && <div className="loader"></div>}
+      {isLoading && <LoadingDiv />}
       {data && !isLoading && (
         <div>
           <Rowofcats>
             <div className="column">
-              {<h2>Breed: {data[0].breeds[0].name}</h2>}
-              {<img src={data[0].url} width="200" height="150" alt="Sphynx" />}
+              {<h2>{data[0].breeds[0].name}</h2>}
+              {
+                <img
+                  className="images"
+                  src={data[0].url}
+                  width="200"
+                  height="150"
+                  alt="Sphynx"
+                />
+              }
               <Link to={ProductDetail}>View More Details</Link>
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[1].breeds[0].name}</h2>}
+              {<h2>{data[1].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[1].url}
                   width="200"
                   height="150"
@@ -69,15 +77,24 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[2].breeds[0].name}</h2>}
-              {<img src={data[2].url} width="200" height="150" alt="Korat" />}
+              {<h2>{data[2].breeds[0].name}</h2>}
+              {
+                <img
+                  className="images"
+                  src={data[2].url}
+                  width="200"
+                  height="150"
+                  alt="Korat"
+                />
+              }
               <Link to={ProductDetail}>View More Details</Link>
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[3].breeds[0].name}</h2>}
+              {<h2>{data[3].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[3].url}
                   width="200"
                   height="150"
@@ -90,9 +107,10 @@ const HomePage = () => {
 
           <Rowofcats>
             <div className="column">
-              {<h2>Breed: {data[4].breeds[0].name}</h2>}
+              {<h2>{data[4].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[4].url}
                   width="200"
                   height="150"
@@ -103,9 +121,10 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[5].breeds[0].name}</h2>}
+              {<h2>{data[5].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[5].url}
                   width="200"
                   height="150"
@@ -116,9 +135,10 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[6].breeds[0].name}</h2>}
+              {<h2>{data[6].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[6].url}
                   width="200"
                   height="150"
@@ -129,9 +149,10 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[7].breeds[0].name}</h2>}
+              {<h2>{data[7].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[7].url}
                   width="200"
                   height="150"
@@ -144,15 +165,24 @@ const HomePage = () => {
 
           <Rowofcats>
             <div className="column">
-              {<h2>Breed: {data[8].breeds[0].name}</h2>}
-              {<img src={data[8].url} width="200" height="150" alt="Bengal" />}
+              {<h2>{data[8].breeds[0].name}</h2>}
+              {
+                <img
+                  className="images"
+                  src={data[8].url}
+                  width="200"
+                  height="150"
+                  alt="Bengal"
+                />
+              }
               <Link to={ProductDetail}>View More Details</Link>
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[9].breeds[0].name}</h2>}
+              {<h2>{data[9].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[9].url}
                   width="200"
                   height="150"
@@ -163,9 +193,10 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[10].breeds[0].name}</h2>}
+              {<h2>{data[10].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[10].url}
                   width="200"
                   height="150"
@@ -176,9 +207,10 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              {<h2>Breed: {data[11].breeds[0].name}</h2>}
+              {<h2>{data[11].breeds[0].name}</h2>}
               {
                 <img
+                  className="images"
                   src={data[11].url}
                   width="200"
                   height="150"
@@ -198,12 +230,43 @@ export default HomePage;
 
 const Rowofcats = styled.div`
   display: flex;
+  margin: 2%;
   justify-content: space-evenly;
+  box-shadow: 2px 2px 10px #cccccc;
 
   .column {
     display: flex;
+    padding: 1%;
+    width: 50%;
     margin: auto;
     align-items: center;
     flex-direction: column;
+  }
+
+  .images {
+    border: thin solid black;
+    margin: 3%;
+  }
+`;
+
+const LoadingDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 `;

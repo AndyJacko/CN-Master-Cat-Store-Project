@@ -158,6 +158,7 @@ const OrangeButton = styled.button`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
+  font-weight: bold;
   text-transform: uppercase;
   border: none;
   border-radius: 10px;
@@ -169,7 +170,9 @@ const BlueButton = styled.button`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
+  font-weight: bold;
   text-transform: uppercase;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   background: #2f6df4;

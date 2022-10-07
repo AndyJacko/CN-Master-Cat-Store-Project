@@ -30,11 +30,23 @@ const App = () => {
       setBasket([...basket, item]);
     }
   };
-
+  
   const removeFromBasket = (item) => {
-    console.log("Remove From Basket");
-    console.log(item);
-    // code to remove item from basket...
+    const existingCartItem = basket.find((cartItem) => cartItem.id === item);
+
+    if (existingCartItem) {
+      const newItems = basket.map((cartItem) => {
+        if (cartItem.id === item) {
+          if (cartItem.quantity > 1) {
+            return { ...cartItem, quantity: +cartItem.quantity - 1 };
+          }
+        } else {
+          return cartItem;
+        }
+      });
+      const filteredItems = newItems.filter((item) => (item ? item : null));
+      setBasket(filteredItems);
+    }
   };
 
   const emptyBasket = () => {

@@ -107,7 +107,6 @@ const Header = () => {
               />
             </Link>
           </NavRight>
-        </NavContainer>
         <NavPhoto>
           <img className="banner" src={Cute} width="100%" alt="" />
         </NavPhoto>

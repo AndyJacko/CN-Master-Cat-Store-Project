@@ -13,6 +13,7 @@ import Cat6 from '../../assets/img/cat6.svg';
 import Cute from '../../assets/img/cute.jpeg';
 import Mail from '../../assets/img/mail.svg';
 import Sell from '../../assets/img/sell.svg';
+import Logopic from '../../assets/img/logo.png'
 
 
 
@@ -29,7 +30,7 @@ const Header = () => {
                 <Link className="burger" href="#">
                   <img className="icon" src={Burger} height="35px" width="35px" alt=""/>
                 </Link>
-                <Logo>Cats4Homes</Logo>
+                <Logo><img src={Logopic} width="36" height="20" />Cats4Homes</Logo>
             </NavLeft>
             <NavRight>
                 <Link className="basket" href="#">
@@ -143,6 +144,8 @@ const NavLeft = styled.div`
 `;
 
 const Logo = styled.div`
+  display: flex;
+  align-items: center;
   color: black;
   margin-left: 50px;
 `;

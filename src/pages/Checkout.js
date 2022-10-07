@@ -1,6 +1,7 @@
 import React from "react";
 
-const Checkout = () => {
+const Checkout = ({ basket }) => {
+  console.log(basket);
   return <div>Checkout</div>;
 };
 

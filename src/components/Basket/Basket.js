@@ -1,12 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const Basket = ({ basket, empty, ocb }) => {
+const Basket = ({ basket, empty, ocb, rfb }) => {
+  const navigate = useNavigate();
+
   const onCloseBasket = () => {
     ocb();
   };
   const onEmptyBasket = () => {
     empty();
+  };
+
+  const onRemoveFromBasket = (e) => {
+    rfb(e.target.id);
+  };
+
+  const onGoToBasket = () => {
+    ocb();
+    navigate("/checkout");
   };
 
   return (
@@ -26,11 +38,16 @@ const Basket = ({ basket, empty, ocb }) => {
                 <p>Cat Name: {item.name}</p>
                 <p>Price: &pound;{item.price}</p>
                 <p>Quantity: {item.quantity}</p>
+                <RemoveItem id={item.id} onClick={onRemoveFromBasket}>
+                  Remove Item
+                </RemoveItem>
               </CartItem>
             );
           })}
 
           <EmptyBasket onClick={onEmptyBasket}>Empty Basket</EmptyBasket>
+
+          <GoToCheckout onClick={onGoToBasket}>Go To Checkout</GoToCheckout>
         </>
       )}
     </div>
@@ -59,9 +76,43 @@ const EmptyBasket = styled.div`
   width: 100%;
   margin: 20px 0;
   padding: 10px;
-  background: red;
+  background: #e90000;
   text-align: center;
   border-radius: 3px;
   font-weight: bold;
   cursor: pointer;
+
+  :hover {
+    background: #8c0000;
+  }
+`;
+
+const GoToCheckout = styled.div`
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  background: #089c00;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+
+  :hover {
+    background: #067500;
+  }
+`;
+
+const RemoveItem = styled.div`
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  background: #ee9900;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+
+  :hover {
+    background: #905d00;
+  }
 `;

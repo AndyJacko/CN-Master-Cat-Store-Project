@@ -34,7 +34,9 @@ const Header = () => {
                 alt=""
               />
             </Link>
-            <Logo>Cats4Homes</Logo>
+            <Link to="/">
+              <Logo>Cats4Homes</Logo>
+            </Link>
           </NavLeft>
           <NavRight>
             <BasketToggle className="basket" onClick={onOpenBasket}>

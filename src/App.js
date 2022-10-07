@@ -23,8 +23,9 @@ const App = () => {
     // code to add item to basket...
   };
 
-  const removeFromBasket = () => {
+  const removeFromBasket = (item) => {
     console.log("Remove From Basket");
+    console.log(item);
     // code to remove item from basket...
   };
 
@@ -40,7 +41,7 @@ const App = () => {
             path="/product/:id"
             element={<ProductDetail atb={addToBasket} />}
           />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout basket={basket} />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </PageLayout>

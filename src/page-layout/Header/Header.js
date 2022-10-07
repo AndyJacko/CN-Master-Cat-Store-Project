@@ -13,6 +13,7 @@ import Cat6 from "../../assets/img/cat6.svg";
 import Cute from "../../assets/img/cute.jpeg";
 import Mail from "../../assets/img/mail.svg";
 import Sell from "../../assets/img/sell.svg";
+import Logoimg from "../../assets/img/logo.png"
 
 const Header = () => {
   const onOpenBasket = () => {
@@ -35,7 +36,7 @@ const Header = () => {
               />
             </Link>
             <Link to="/">
-              <Logo>Cats4Homes</Logo>
+              <Logo><img src={Logoimg} width="36" height="20" />Cats4Homes</Logo>
             </Link>
           </NavLeft>
           <NavRight>
@@ -167,6 +168,9 @@ const NavLeft = styled.div`
 `;
 
 const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   margin-left: 50px;
 `;

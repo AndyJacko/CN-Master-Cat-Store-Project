@@ -13,6 +13,7 @@ import Cat6 from "../../assets/img/cat6.svg";
 import Cute from "../../assets/img/cute.jpeg";
 import Mail from "../../assets/img/mail.svg";
 import Sell from "../../assets/img/sell.svg";
+import Logoimg from "../../assets/img/logo.png"
 
 const Header = () => {
   const onOpenBasket = () => {
@@ -23,19 +24,55 @@ const Header = () => {
   return (
     <MainContainer>
       <Container>
-        <NavContainer>
-          <NavLeft>
-            <Link className="burger" href="#">
-              <img
-                className="icon"
-                src={Burger}
-                height="35px"
-                width="35px"
-                alt=""
-              />
+          <NavContainer>
+            <NavLeft >
+                <Link className="burger" href="#">
+                  <img className="icon" src={Burger} height="35px" width="35px" alt=""/>
+                </Link>
+                <Logo><img src={Logopic} width="36" height="20" />Cats4Homes</Logo>
+            </NavLeft>
+            <NavRight>
+                <Link className="basket" href="#">
+                    <img className="icon" src={Basket} width="35px" border="solid black" border-radius="5px" alt=""/>
+                </Link>
+                <Link className="mail" href="mailto:mail@cat4homes.com">
+                    <img className="icon" src={Mail} width="35px" border="solid black" border-radius="5px" alt=""/>
+                </Link>
+                <Link className="sell" href="#">
+                    <img className="icon" src={Sell} width="35px" border="solid black" border-radius="5px" alt=""/>
+                </Link>
+            </NavRight>
+        </NavContainer>
+        <NavPhoto >
+            <img className="banner" src={Cute} width="100%" alt=""/>
+        </NavPhoto>
+        <Round className="round-icon">
+            <Link className="cat" href="#">
+                <RoundIcon>
+                  <img className="cat1" src={Cat} alt=""/>
+                  Abyssinian
+                </RoundIcon>
+            </Link>
+            <Link className="cat" href="#">
+              <RoundIcon>
+                <img className="cat1" src={Cat1} alt=""/>
+                Birman
+              </RoundIcon>
+            </Link>
+            <Link className="cat" href="#">
+              <RoundIcon>
+                <img className="cat1" src={Cat2} alt=""/>
+                Bombay
+              </RoundIcon>
+            </Link>
+            <Link className="cat" href="#">
+              <RoundIcon>
+                <img className="cat1" src={Cat3} alt=""/>
+                British
+              </RoundIcon>
             </Link>
             <Link to="/">
-              <Logo>Cats4Homes</Logo>
+              <Logo><img src={Logoimg} width="36" height="20" />Cats4Homes</Logo>
             </Link>
           </NavLeft>
           <NavRight>
@@ -167,6 +204,9 @@ const NavLeft = styled.div`
 `;
 
 const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   margin-left: 50px;
 `;

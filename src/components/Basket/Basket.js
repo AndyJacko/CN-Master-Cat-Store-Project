@@ -5,6 +5,14 @@ import styled from "styled-components";
 const Basket = ({ basket, empty, ocb, rfb }) => {
   const navigate = useNavigate();
 
+  let totalPrice = 0;
+  let totalItems = 0;
+
+  basket.forEach((item) => {
+    totalPrice += item.price * item.quantity;
+    totalItems += item.quantity;
+  });
+
   const onCloseBasket = () => {
     ocb();
   };
@@ -44,6 +52,9 @@ const Basket = ({ basket, empty, ocb, rfb }) => {
               </CartItem>
             );
           })}
+
+          <BasketText>Total Items: {totalItems}</BasketText>
+          <BasketText>Total Price: &pound;{totalPrice}</BasketText>
 
           <EmptyBasket onClick={onEmptyBasket}>Empty Basket</EmptyBasket>
 
@@ -115,4 +126,14 @@ const RemoveItem = styled.div`
   :hover {
     background: #905d00;
   }
+`;
+
+const BasketText = styled.div`
+  width: 100%;
+  margin: 4px 0;
+  padding: 4px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
 `;

@@ -74,7 +74,7 @@ const Header = () => {
             <Link to="/">
               <Logo><img src={Logoimg} width="36" height="20" />Cats4Homes</Logo>
             </Link>
-          </NavLeft>
+          </Round>
           <NavRight>
             <BasketToggle className="basket" onClick={onOpenBasket}>
               <img

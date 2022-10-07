@@ -8,9 +8,7 @@ import Checkout from "./pages/Checkout";
 import Basket from "./components/Basket/Basket";
 
 const App = () => {
-  const [basket, setBasket] = useState([
-    { id: "BDb8ZXb1v", name: "Sphynx", price: 250, quantity: 1 },
-  ]);
+  const [basket, setBasket] = useState([]);
 
   const onCloseBasket = () => {
     document.getElementById("overlay").classList.add("hide");
@@ -18,9 +16,19 @@ const App = () => {
   };
 
   const addToBasket = (item) => {
-    console.log("Add To Basket");
-    console.log(item);
-    // code to add item to basket...
+    const existingCartItem = basket.find((cartItem) => cartItem.id === item.id);
+
+    if (existingCartItem) {
+      const newItems = basket.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: +cartItem.quantity + +item.quantity }
+          : cartItem
+      );
+
+      setBasket(newItems);
+    } else {
+      setBasket([...basket, item]);
+    }
   };
 
   const removeFromBasket = (item) => {

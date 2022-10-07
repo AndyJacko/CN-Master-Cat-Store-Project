@@ -12,19 +12,18 @@ const Content = ({ children }) => {
 export default Content;
 
 const MainContainer = styled.div`
-  width: 100%;
   background: #e9eff5;
 `;
 
 const Container = styled.div`
-  width: 100%;
   padding: 20px;
   color: #000000;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 
   @media (min-width: 768px) {
     width: 80%;
     margin: auto;
+    font-size: 16px;
   }
 `;

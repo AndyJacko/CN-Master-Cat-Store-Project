@@ -7,11 +7,6 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-}
-
-body {
   font-family: "Outfit", sans-serif;
   color: #000000;
   background-color: #ffffff;
@@ -19,16 +14,64 @@ body {
 
 /* ============ header ============ */
 
-.cat1{
+.cat1 {
   height: 55px;
   width: 55px;
-  border:solid black;
+  border: solid black;
   border-radius: 50px;
   padding: 10px;
-  background-color:white;
+  background-color: white;
 }
-.banner{
+.banner {
   display: block;
 }
 
 /* ================================= */
+
+#root {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 300;
+  backdrop-filter: blur(10px);
+}
+
+.hide {
+  display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 400;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  color: #ffffff;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.closebtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.open {
+  width: 300px;
+  padding: 60px 20px 20px 20px;
+}
